@@ -1,0 +1,16 @@
+<p>Filter by type: </p>
+<button (click)="vegetable()">Vegetable</button>
+<button (click)="fruit()">Fruit</button>
+<button (click)="ngOnInit()">All</button>
+<p>Sort: </p>
+<button (click)="sortHigh()">price: High to low</button>
+<button (click)="sortLow()">price: Low to high</button>
+<button (click)="sortByName()">name</button>
+<ul  class="item-list store--item-list">
+  <li *ngFor="let item of products">
+    <div class="store--item-icon">
+      <img [src]="'assets/icons/'+item.id +'.svg'" />
+    </div>
+    <button (click)="addToCart(item)">Add to cart</button>
+  </li>
+</ul>
